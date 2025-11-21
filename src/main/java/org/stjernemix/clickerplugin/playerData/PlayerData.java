@@ -28,4 +28,13 @@ public class PlayerData {
     private int money;
     private int multiplier;
     private int rebirths;
+    private boolean adminBypass;
+
+    public boolean getAdminBypass() {
+        return adminBypass;
+    }
+
+    public void setAdminBypass(boolean adminBypass) {
+        this.adminBypass = adminBypass;
+    }
 }

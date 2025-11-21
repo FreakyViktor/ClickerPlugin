@@ -24,10 +24,12 @@ public class GeneralEvents implements Listener {
             data.setMoney(cfg.getInt("stats.money"));
             data.setMultiplier(cfg.getInt("stats.multiplier"));
             data.setRebirths(cfg.getInt("stats.rebirths"));
+            data.setAdminBypass(cfg.getBoolean("stats.adminBypass"));
         } else {
             data.setMoney(0);
             data.setMultiplier(1);
             data.setRebirths(0);
+            data.setAdminBypass(false);
         }
 
         PlayerUtil.setPlayerData(event.getPlayer(), data);
@@ -43,6 +45,7 @@ public class GeneralEvents implements Listener {
         cfg.set("stats.money", data.getMoney());
         cfg.set("stats.multiplier", data.getMultiplier());
         cfg.set("stats.rebirths", data.getRebirths());
+        cfg.set("stats.adminBypass", data.getAdminBypass());
 
         try{ cfg.save(f); } catch (IOException e){ e.printStackTrace(); }
         PlayerUtil.setPlayerData(event.getPlayer(), null);
