@@ -1,0 +1,3 @@
+name: ClickerPlugin
+version: '${project.version}'
+main: org.stjernemix.clickerplugin.ClickerPlugin
